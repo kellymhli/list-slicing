@@ -68,7 +68,7 @@ def init(input_list):
 
     """
 
-    return (input_list[0:2])
+    return (input_list[:-1])
 
 
 ##############################################################################
@@ -154,7 +154,6 @@ def replace_head(input_list):
 
     """
     input_list[0] = 42
-    pass
 
 
 def replace_third_and_last(input_list):
@@ -170,8 +169,6 @@ def replace_third_and_last(input_list):
     """
     input_list[2] = 37
     input_list[-1] = 37
-
-    pass
 
 
 def replace_middle(input_list):
@@ -191,8 +188,6 @@ def replace_middle(input_list):
     """
     input_list[2:-2] = [42, 37]
 
-    pass
-
 
 def delete_third_and_seventh(input_list):
     """Remove third and seventh elements of input_list and return nothing.
@@ -205,11 +200,13 @@ def delete_third_and_seventh(input_list):
     True
 
     """
+    # new_list = input_list[:2]
+    # new_list.extend(input_list[3:6])
+    # new_list.extend(input_list[-1:])
+    # input_list = new_list
     del input_list[2]
-    del input_list[5]
-
-    pass
-
+    del input_list[-2]
+   
 
 def delete_middle(input_list):
     """Remove all elements from input_list except the first two and last two.
@@ -225,8 +222,6 @@ def delete_middle(input_list):
 
     """
     del input_list[2:-2]
-
-    pass
 
 
 ##############################################################################
