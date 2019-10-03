@@ -200,12 +200,9 @@ def delete_third_and_seventh(input_list):
     True
 
     """
-    # new_list = input_list[:2]
-    # new_list.extend(input_list[3:6])
-    # new_list.extend(input_list[-1:])
-    # input_list = new_list
-    del input_list[2]
-    del input_list[-2]
+    input_list[2:3] = []
+    input_list[-2:-1] = []
+    # print(input_list)
    
 
 def delete_middle(input_list):
@@ -221,7 +218,8 @@ def delete_middle(input_list):
     True
 
     """
-    del input_list[2:-2]
+    input_list[2:6] = []
+    # del input_list[2:-2]
 
 
 ##############################################################################
