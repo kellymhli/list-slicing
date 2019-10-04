@@ -215,7 +215,14 @@ def custom_contains(input_list, value):
 
     """
 
-    return None
+    contains = False
+
+    for item in input_list:
+        if item == value:
+            contains = True
+            break
+
+    return contains
 
 
 def custom_equality(some_list, another_list):
