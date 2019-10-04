@@ -242,7 +242,8 @@ def custom_equality(some_list, another_list):
                 break
             else:
                 continue
-
+    else:
+        are_identical = False
 
     return (are_identical)
 
