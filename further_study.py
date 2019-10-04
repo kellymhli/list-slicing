@@ -197,8 +197,6 @@ def custom_reverse(input_list):
 
     """
 
-    input_list[::-1]
-
 
 def custom_contains(input_list, value):
     """Return True or False if value is in the input_list.
@@ -235,8 +233,18 @@ def custom_equality(some_list, another_list):
         False
 
     """
+    are_identical = True
 
-    return None
+    if custom_len(some_list) == custom_len(another_list):
+        for i in range(0, custom_len(some_list)):
+            if some_list[i] != another_list[i]:
+                are_identical = False
+                break
+            else:
+                continue
+
+
+    return (are_identical)
 
 
 # ##############################################################################
