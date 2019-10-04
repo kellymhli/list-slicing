@@ -142,23 +142,32 @@ def custom_insert(input_list, index, value):
     
 
 
-# def custom_pop(input_list):
-#     """Remove the last item in the list and returns it.
+def custom_pop(input_list):
+    """Remove the last item in the list and returns it.
 
-#     The function custom_pop(input_list) should have the same functionality
-#     and result as input_list.pop().
+    The function custom_pop(input_list) should have the same functionality
+    and result as input_list.pop().
 
-#     For example:
+    For example:
 
-#         >>> months = ['Jan', 'Feb', 'March']
-#         >>> custom_pop(months)
-#         'March'
-#         >>> months
-#         ['Jan', 'Feb']
+        >>> months = ['Jan', 'Feb', 'March']
+        >>> custom_pop(months)
+        'March'
+        >>> months
+        ['Jan', 'Feb']
 
-#     """
+    """
+    last_value = input_list[-1]
 
-#     return None
+    input_list[-1:] = []
+
+    # print(last_value)
+
+    # print(input_list)
+
+
+
+    return last_value
 
 
 # def custom_index(input_list, value):
