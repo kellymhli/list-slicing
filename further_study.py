@@ -64,7 +64,6 @@ def custom_append(input_list, value):
     last = input_list[-1]
     input_list[-1:] = [last, value]
     #print (input_list[-1:], [input_list[-1:], value])
-
     
 
 
@@ -83,8 +82,13 @@ def custom_extend(input_list, second_list):
         True
 
     """
+    # last = input_list[-1]
+    # input_list[-1:] = [last, second_list]
 
-    pass
+    for i in second_list:
+        custom_append(input_list, i) 
+
+    
 
 
 def custom_insert(input_list, index, value):
@@ -101,143 +105,157 @@ def custom_insert(input_list, index, value):
         True
 
     """
-
-    pass
-
-
-def custom_remove(input_list, value):
-    """Remove the first item of the value in list.
-
-    The function custom_remove(input_list, value) should have the same
-    functionality as input_list.remove(value) where the first item of
-    the value specified is removed and the function returns nothing.
-
-    For example:
-
-        >>> notes = ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do']
-        >>> custom_remove(notes, 'Do')
-        >>> notes == ['Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do']
-        True
-
-    """
-
-    pass
+    # tail = input_list[index:]
+    # input_list[index:] = [value]
+    # for i in tail:
+    #     custom_append(input_list, i)
+    input_list[index:index] = [value]
 
 
-def custom_pop(input_list):
-    """Remove the last item in the list and returns it.
 
-    The function custom_pop(input_list) should have the same functionality
-    and result as input_list.pop().
+# def custom_remove(input_list, value):
+#     """Remove the first item of the value in list.
 
-    For example:
+#     The function custom_remove(input_list, value) should have the same
+#     functionality as input_list.remove(value) where the first item of
+#     the value specified is removed and the function returns nothing.
 
-        >>> months = ['Jan', 'Feb', 'March']
-        >>> custom_pop(months)
-        'March'
-        >>> months
-        ['Jan', 'Feb']
+#     For example:
 
-    """
+#         >>> notes = ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do']
+#         >>> custom_remove(notes, 'Do')
+#         >>> notes == ['Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do']
+#         True
 
-    return None
+#     """
 
+#     # for i in input_list:
 
-def custom_index(input_list, value):
-    """Return the index of the first item of value found in input_list.
-
-    The function custom_index(input_list, value) should have the same
-    functionality and result as input_list.index(value).
-
-    For example:
-
-        >>> custom_index(['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do'], 'Re')
-        1
-
-    """
-
-    return 0
+#     #     if i == value:
 
 
-def custom_count(input_list, value):
-    """Return the number of times value appears in the list.
-
-    Like input_list.count(value), custom_count(input_list, value) should
-    return the number of times the specified value appears in the list.
-
-    For example:
-
-        >>> custom_count(['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do'], 'Do')
-        2
-
-    """
-
-    return 0
 
 
-def custom_reverse(input_list):
-    """Reverse the elements of the input_list.
-
-    Like input_list.reverse(), custom_reverse(input_list) should reverse the
-    elements of the original list and return nothing (we call this reversing
-    "in place").
-
-    For example:
-
-        >>> multiples = [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
-        >>> custom_reverse(multiples)
-        >>> multiples == [27, 24, 21, 18, 15, 12, 9, 6, 3, 0]
-        True
-
-    """
-
-    pass
 
 
-def custom_contains(input_list, value):
-    """Return True or False if value is in the input_list.
 
-    Like (value in input_list), should return True if the list contains the
-    specified value and False if it does not. Remember, do not use the `if X in Y`
-    statement -- find another way to solve it!
-
-    For example:
-
-        >>> custom_contains([0, 3, 6, 9, 12, 15, 18, 21, 24], 23)
-        False
-
-        >>> custom_contains([0, 3, 6, 9, 12, 15, 18, 21, 24], 24)
-        True
-
-    """
-
-    return None
+    
 
 
-def custom_equality(some_list, another_list):
-    """Return True if passed lists are identical, False otherwise.
+# def custom_pop(input_list):
+#     """Remove the last item in the list and returns it.
 
-    Like (some_list == another_list), custom_equality(some_list, another_list)
-    should return True if both lists contain the same values in the same indexes.
+#     The function custom_pop(input_list) should have the same functionality
+#     and result as input_list.pop().
 
-    For example:
+#     For example:
 
-        >>> custom_equality(['Jan', 'Feb', 'Mar'], ['Jan', 'Feb', 'Mar'])
-        True
+#         >>> months = ['Jan', 'Feb', 'March']
+#         >>> custom_pop(months)
+#         'March'
+#         >>> months
+#         ['Jan', 'Feb']
 
-        >>> custom_equality(['Jan', 'Feb', 'Mar'], ['Jan', 'Mar', 'Feb'])
-        False
+#     """
 
-    """
-
-    return None
+#     return None
 
 
-##############################################################################
-# Please ask for a code review. Also, give your partner a high-five!
-##############################################################################
+# def custom_index(input_list, value):
+#     """Return the index of the first item of value found in input_list.
 
-# This is the part were we actually run the doctests.
+#     The function custom_index(input_list, value) should have the same
+#     functionality and result as input_list.index(value).
+
+#     For example:
+
+#         >>> custom_index(['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do'], 'Re')
+#         1
+
+#     """
+
+#     return 0
+
+
+# def custom_count(input_list, value):
+#     """Return the number of times value appears in the list.
+
+#     Like input_list.count(value), custom_count(input_list, value) should
+#     return the number of times the specified value appears in the list.
+
+#     For example:
+
+#         >>> custom_count(['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do'], 'Do')
+#         2
+
+#     """
+
+#     return 0
+
+
+# def custom_reverse(input_list):
+#     """Reverse the elements of the input_list.
+
+#     Like input_list.reverse(), custom_reverse(input_list) should reverse the
+#     elements of the original list and return nothing (we call this reversing
+#     "in place").
+
+#     For example:
+
+#         >>> multiples = [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
+#         >>> custom_reverse(multiples)
+#         >>> multiples == [27, 24, 21, 18, 15, 12, 9, 6, 3, 0]
+#         True
+
+#     """
+
+#     pass
+
+
+# def custom_contains(input_list, value):
+#     """Return True or False if value is in the input_list.
+
+#     Like (value in input_list), should return True if the list contains the
+#     specified value and False if it does not. Remember, do not use the `if X in Y`
+#     statement -- find another way to solve it!
+
+#     For example:
+
+#         >>> custom_contains([0, 3, 6, 9, 12, 15, 18, 21, 24], 23)
+#         False
+
+#         >>> custom_contains([0, 3, 6, 9, 12, 15, 18, 21, 24], 24)
+#         True
+
+#     """
+
+#     return None
+
+
+# def custom_equality(some_list, another_list):
+#     """Return True if passed lists are identical, False otherwise.
+
+#     Like (some_list == another_list), custom_equality(some_list, another_list)
+#     should return True if both lists contain the same values in the same indexes.
+
+#     For example:
+
+#         >>> custom_equality(['Jan', 'Feb', 'Mar'], ['Jan', 'Feb', 'Mar'])
+#         True
+
+#         >>> custom_equality(['Jan', 'Feb', 'Mar'], ['Jan', 'Mar', 'Feb'])
+#         False
+
+#     """
+
+#     return None
+
+
+# ##############################################################################
+# # Please ask for a code review. Also, give your partner a high-five!
+# ##############################################################################
+
+# # This is the part were we actually run the doctests.
 
 if __name__ == "__main__":
     import doctest
